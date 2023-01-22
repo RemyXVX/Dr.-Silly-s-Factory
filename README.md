@@ -81,7 +81,7 @@ $dotnet run
 <big>Now we can double check for errors in our code addressed it by the errors that follow<br>
 
 ## Known Bugs
-* _Can't figure out how to populate my styling with liveserving, HELP!_
+* _Insert issue here!_
 
 ## License
 * **SEE LICENSE [HERE](./LICENSE.txt)** 

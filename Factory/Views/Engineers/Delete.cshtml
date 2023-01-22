@@ -1,0 +1,18 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Engineer
+
+<h2>Delete all of it for @Html.DisplayFor(model => model.EngineerName)? (for real for real?)</h2>
+
+@using (Html.BeginForm())
+{
+  <input type="submit" value="Delete" class="btn" />
+}
+<br>
+<div>
+  <span>
+      <span>@Html.ActionLink("Back to engineers", "Index")</span>
+  </span>
+</div>

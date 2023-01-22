@@ -1,0 +1,27 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Engineer
+
+<h4>Add a new Engineer</h4>
+<br>
+@using (Html.BeginForm())
+{
+  <p>@Html.LabelFor(model => model.Machine, new { @class = "", placeholder="Required", required="required"})</p>
+  <p>@Html.DropDownList("MachineId")</p>
+  <p>Name:</p>
+  <p>@Html.TextBoxFor(model => model.EngineerName, new { @class = "", placeholder="Required", required="required"})</p>
+  <p>Description:</p>
+  <p>@Html.TextBoxFor(model => model.EngineerDescription, new { @class = "", placeholder="Required", required="required"})</p>
+  <br>
+  <input type="submit" value="Save engineer" class="btn" />
+}
+<br>
+<div>
+  <span>
+      <span>@Html.ActionLink("Back to Home", "Index", "Home")</span>
+      <br>
+      <span>@Html.ActionLink("See All Machines", "Index", "Machines")</span>
+  </span>
+</div>

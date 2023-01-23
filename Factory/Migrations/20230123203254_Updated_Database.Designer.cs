@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Factory.Migrations
 {
     [DbContext(typeof(FactoryContext))]
-    [Migration("20230122161731_EngineerMachine")]
-    partial class EngineerMachine
+    [Migration("20230123203254_Updated_Database")]
+    partial class Updated_Database
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -36,8 +36,6 @@ namespace Factory.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("EngineerId");
-
-                    b.HasIndex("MachineId");
 
                     b.ToTable("Engineers");
                 });
@@ -80,27 +78,16 @@ namespace Factory.Migrations
                     b.ToTable("Machines");
                 });
 
-            modelBuilder.Entity("Factory.Models.Engineer", b =>
-                {
-                    b.HasOne("Factory.Models.Machine", "Machine")
-                        .WithMany("Engineers")
-                        .HasForeignKey("MachineId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Machine");
-                });
-
             modelBuilder.Entity("Factory.Models.EngineerMachine", b =>
                 {
                     b.HasOne("Factory.Models.Engineer", "Engineer")
-                        .WithMany()
+                        .WithMany("JoinEntities")
                         .HasForeignKey("EngineerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Factory.Models.Machine", "Machine")
-                        .WithMany()
+                        .WithMany("JoinEntities")
                         .HasForeignKey("MachineId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -110,9 +97,14 @@ namespace Factory.Migrations
                     b.Navigation("Machine");
                 });
 
+            modelBuilder.Entity("Factory.Models.Engineer", b =>
+                {
+                    b.Navigation("JoinEntities");
+                });
+
             modelBuilder.Entity("Factory.Models.Machine", b =>
                 {
-                    b.Navigation("Engineers");
+                    b.Navigation("JoinEntities");
                 });
 #pragma warning restore 612, 618
         }

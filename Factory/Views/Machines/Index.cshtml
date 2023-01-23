@@ -5,7 +5,9 @@
 @using Factory.Models;
 
 <h1>Machine(s):</h1>
+<hr />
 
+<div class="machine">
 @if (@Model.Count == 0)
 {
   <h3>No machine(s) as of yet. Lets input some?</h3>
@@ -13,16 +15,17 @@
 
 @foreach (Machine machine in Model)
 {
-  <li>@Html.ActionLink($"{machine.MachineName}", "Details", new { id = machine.MachineId }) </li>
+  <li>@Html.ActionLink($"{machine.MachineName}", "Details", new { id = machine.MachineId })</li>
 }
-<br>
+</div>
 
+<br>
 <div>
   <span>
-      <span>@Html.ActionLink("Add new machine", "Create")</span>
+      <span>@Html.ActionLink("Add New Machine", "Create")</span>
       <br>
-      <span>@Html.ActionLink("Add new Engineer", "Create", "Engineers")</span>
+      <span>@Html.ActionLink("To Engineer", "Index", "Engineers")</span>
       <br>
-      <span>@Html.ActionLink("Back to home", "Index", "Home")</span>
+      <span>@Html.ActionLink("Home", "Index", "Home")</span>
   </span>
 </div>

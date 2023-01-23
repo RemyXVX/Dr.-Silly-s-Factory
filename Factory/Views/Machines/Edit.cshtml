@@ -11,15 +11,16 @@
 {
     @Html.HiddenFor(model => model.MachineId)
 
-    <p>Name:</p>
-    <p>@Html.EditorFor(model => model.MachineName)</p>
+    <span>Name:</span>
+    <span>@Html.EditorFor(model => model.MachineName)</span>
 
-    <p>Description</p>
-    <p>@Html.EditorFor(model => model.MachineDetails)</p>
+    <span>Descrispantion</span>
+    <span>@Html.EditorFor(model => model.MachineDetails)</span>
 
 <br>
     <input type="submit" value="Save" class="btn" />
 }
+
 <br>
 <div>
   <span>

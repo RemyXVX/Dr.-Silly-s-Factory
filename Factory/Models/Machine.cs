@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Factory.Models
 {
@@ -7,6 +8,6 @@ namespace Factory.Models
     public int MachineId {get; set;}
     public string MachineName {get; set;}
     public string MachineDetails {get; set;}
-    public List<Engineer> Engineers {get; set;}
+    public List<EngineerMachine> JoinEntities { get; }
   }
 }

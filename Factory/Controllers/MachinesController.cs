@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
 using Factory.Models;
@@ -19,6 +19,7 @@ namespace Factory.Controllers
 
     public ActionResult Index()
     {
+      // List<Machine> model = _db.Machines.ToList();
       return View(_db.Machines.ToList());
     }
 

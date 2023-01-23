@@ -25,6 +25,7 @@ namespace Factory.Controllers
 
     public ActionResult Create()
     {
+      ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "MachineName");
       return View();
     }
 
@@ -33,6 +34,7 @@ namespace Factory.Controllers
     {
       if (!ModelState.IsValid)
       {
+        ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "MachineName");
         return View(engineer);
       }
       else

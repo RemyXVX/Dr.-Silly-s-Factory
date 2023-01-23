@@ -8,8 +8,6 @@
 <br>
 @using (Html.BeginForm())
 {
-  <p>@Html.LabelFor(model => model.Machine, new { @class = "", placeholder="Required", required="required"})</p>
-  <p>@Html.DropDownList("MachineId")</p>
   <p>Name:</p>
   <p>@Html.TextBoxFor(model => model.EngineerName, new { @class = "", placeholder="Required", required="required"})</p>
   <p>Description:</p>

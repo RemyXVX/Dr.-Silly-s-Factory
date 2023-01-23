@@ -14,8 +14,8 @@
     <p>Name:</p>
     <p>@Html.EditorFor(model => model.EngineerName)</p>
 
-    <p>Stylist:</p>
-    <p>@Html.DropDownList("StylistId")</p>
+    @* <p>Machine:</p>
+    <p>@Html.DropDownList("MachineId")</p> *@
 
     <p>Description:</p>
     <p>@Html.EditorFor(model => model.EngineerDescription)</p>
@@ -23,9 +23,12 @@
 <br>
     <input type="submit" value="Save" class="btn" />
 }
+
 <br>
 <div>
   <span>
-      <span>@Html.ActionLink("Back to engineers", "Index")</span>
+      <span>@Html.ActionLink("Back to engineer(s)", "Index")</span>
+      <br>
+      <span>@Html.ActionLink("Home", "Index", "Home")</span>
   </span>
 </div>

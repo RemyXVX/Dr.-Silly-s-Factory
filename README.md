@@ -9,8 +9,7 @@
 * GitBash
 * C#
 * .NET6 SDK
-* MSTest
-* WindowPowershell
+* WindowPowerShell
 * Razor
 * CSS
 * HTML
@@ -18,7 +17,7 @@
 * MySQL Workbench
 
 ## Description
-_(insert description)_
+_Ceating a web application for our client Dr. SillyStringz that allows him to input newly created machines and engineers who are licensed to work on them._
 
 ## Webpage
 * [https://github.com/RemyXVX/Dr.-Silly-s-Factory]
@@ -81,7 +80,7 @@ $dotnet run
 <big>Now we can double check for errors in our code addressed it by the errors that follow<br>
 
 ## Known Bugs
-* _Insert issue here!_
+* _It might not look pretty but it's functional. I also ran out of CocaCola. (please sponsor me!!)_
 
 ## License
 * **SEE LICENSE [HERE](./LICENSE.txt)** 
